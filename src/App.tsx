@@ -1,16 +1,19 @@
-import React, { useContext, useEffect } from 'react';
+import React from 'react';
 
-import Content from './components/Content'
+import Content from './components/Publication/Content'
 import Header from './components/Header/Header'
-
+import Feed from './components/Feed/Feed';
+import GlobalStyle from './styles/Global'
 
 const App = () => {
 
  
   return (
    <>
+   <GlobalStyle/>
    <Header/>
    <Content/>
+   <Feed/>
    </>
   );
 }
