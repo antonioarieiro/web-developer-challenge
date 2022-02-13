@@ -46,7 +46,7 @@ const Content: React.FC = () => {
                 placeholder='insert image'
                 ref={getImage}
                 accept='image/*'
-                onChange={(e) => {
+                onChange={(e: any) => {
                   const file = e.target.files;
                   if (file) {
                     setImage(file[0]);
@@ -70,9 +70,9 @@ const Content: React.FC = () => {
 
           <DescritionInput
             type='text'
-            value={description}
             placeholder='type your comment'
-            onChange={(e) => setDescription(e.target.value)}
+            value={description}
+            onChange={(e: any) => setDescription(e.target.value)}
           />
           <GroupButton>
             <button

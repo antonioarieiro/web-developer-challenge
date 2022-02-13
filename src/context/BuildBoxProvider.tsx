@@ -47,9 +47,7 @@ export function BuildBoxContextProvider({ children }: Props) {
   };
 
   return (
-    // eslint-disable-next-line react/jsx-filename-extension
     <BuildBoxContext.Provider
-      // eslint-disable-next-line react/jsx-no-constructed-context-values
       value={{
         publication,
         createNewPublication,
