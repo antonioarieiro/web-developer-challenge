@@ -1,5 +1,4 @@
-import styled from "styled-components";
-import Remove from "../../images/remove.svg";
+import styled from 'styled-components';
 
 export const FeedContainer = styled.div`
   background: #2b2b2b;

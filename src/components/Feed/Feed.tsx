@@ -1,8 +1,7 @@
-import React, { useContext } from "react";
+import React, { useContext } from 'react';
 import { BuildBoxContext } from '../../context/buildBoxContext';
 import Remove from '../../images/remove.svg';
-import { FeedContainer, FeedBox } from "./styles";
-
+import { FeedContainer, FeedBox } from './styles';
 
 const Feed: React.FC = () => {
  
@@ -14,7 +13,7 @@ const Feed: React.FC = () => {
       {currentPublication?.slice(0).reverse().map((a) => (
         <FeedBox key={a.id+1}>
           <button onClick={() => {revemovePost(a.id)}}><img src={Remove}/></button>
-          <img src={a?.photo} alt="image"/>  
+          <img src={a?.photo} alt='image'/>  
           <h4>
             {a.description}
           </h4>
