@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Remove from "../../images/remove.svg";
 
 export const FeedContainer = styled.div`
   background: #2b2b2b;
@@ -26,18 +27,30 @@ export const FeedBox = styled.div`
   flex-wrap: wrap;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: flex-center;
   margin: 40px 425px 56px;
   padding: 24px;
   border-radius: 3px;
   border: solid 1px #3b3b3b;
   background: #313131;
+  overflow: hidden;
+  text-overflow: ellipsis;
   img {
-    width: 88px;
-    height: 88px;
+    width: 100px;
+    height: 100px;
     margin: 24px 32px 16px 0;
     object-fit: contain;
     border-radius: 36px;
+  }
+  button {
+    width: 25px;
+    height: 25px;
+    background: black;
+    > img {
+      width: 20px;
+      margin: auto;
+      height: 20px;
+    }
   }
   h4 {
     width: 348px;

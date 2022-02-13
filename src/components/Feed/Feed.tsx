@@ -1,19 +1,28 @@
-import React from "react";
-import { FeedContainer, FeedBox } from './styles';
-import Logo from '../../images/logo.png'
+import React, { useContext } from "react";
+import { BuildBoxContext } from '../../context/buildBoxContext';
+import Remove from '../../images/remove.svg';
+import { FeedContainer, FeedBox } from "./styles";
+
 
 const Feed: React.FC = () => {
  
+  const { currentPublication, revemovePost } = useContext(BuildBoxContext);
+
   return (
-      <FeedContainer>
-          <p>Feed</p>
-          <FeedBox>
-            <img src={Logo} alt="2"/>
-            <h4>Lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-Nulla-mattis-ligula-vel-velit-scelerisque-iaculis-Nam-mattis-justo-id-orci-commodo-eu-tempus-purus-cursus</h4>
-            <p>enviado por:</p>
-          </FeedBox>
-      </FeedContainer>
-  )
+    <FeedContainer>
+      <p>Feed</p>
+      {currentPublication?.slice(0).reverse().map((a) => (
+        <FeedBox key={a.id+1}>
+          <button onClick={() => {revemovePost(a.id)}}><img src={Remove}/></button>
+          <img src={a?.photo} alt="image"/>  
+          <h4>
+            {a.description}
+          </h4>
+          <p>enviado por: {a.name}</p>
+        </FeedBox>
+      ))}
+    </FeedContainer>
+  );
 };
 
 export default Feed;
