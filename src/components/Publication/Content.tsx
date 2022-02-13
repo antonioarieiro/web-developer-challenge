@@ -80,6 +80,7 @@ const Content: React.FC = () => {
                 setName('');
                 setDescription('');
                 setPreviewImage('');
+                setImage(undefined)
                 setIsTrue(false);
               }}
             >
