@@ -1,20 +1,4 @@
-import { createContext } from "react";
+import { createContext } from 'react';
+import { Content } from '../interfaces/Interfaces';
 
-interface Publication {
-    id: number;
-    name: string;
-    description: string;
-    photo: File | undefined;
-}
-
-
-interface Content { 
-    publications?: Publication[],
-    total_publications?: number;
-}
-
-export const buildBoxContext = createContext<Content>({
-    publications:[],
-    total_publications: 0,
-});
-
+export const BuildBoxContext = createContext({} as Content);
