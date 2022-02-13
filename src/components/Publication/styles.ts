@@ -18,11 +18,10 @@ export const PublicationBox = styled.div`
   border: solid 1px #3b3b3b;
   background-color: #313131;
   > img {
-    width: 88px;
-    height: 88px;
+    width: 300px;
+    height: 200px;
     margin: auto;
-    padding: 32px;
-    object-fit: contain;
+    object-fit: fill;
     border-radius: 36px;
     border: solid 1px #4b4b4b;
     background-color: rgba(75, 75, 75, 0);
@@ -37,6 +36,18 @@ export const PublicationBox = styled.div`
     border-radius: 8px;
     background-color: #494949;
   }
+`;
+
+export const FileImage = styled.input`
+  color: transparent;
+  width: 300px;
+  height: 200px;
+  margin: auto;
+  object-fit: fill;
+  border-radius: 36px;
+  border: solid 4px white;
+  background-color: rgba(75, 75, 75, 0);
+  
 `;
 
 export const DescritionInput = styled.input`
@@ -61,12 +72,12 @@ export const GroupButton = styled.div`
     border-radius: 8px;
     background-color: green;
     text-align: center;
-     p {
+    p {
       width: auto;
       height: auto;
       font-family: Roboto;
       font-size: 20px;
-      
+
       letter-spacing: normal;
       text-align: center;
       color: white;
