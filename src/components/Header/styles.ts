@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-export const Container = styled.div `
+export const Container = styled.div`
   height: 120px;
   background: #2b2b2b;
   display: flex;
@@ -12,4 +12,4 @@ export const Container = styled.div `
     height: 45px;
     object-fit: contain;
   }
-`
+`;
