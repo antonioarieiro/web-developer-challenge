@@ -46,6 +46,7 @@ const Content: React.FC = () => {
                 placeholder='insert image'
                 ref={getImage}
                 accept='image/*'
+                value={preview}
                 onChange={(e: any) => {
                   const file = e.target.files;
                   if (file) {
@@ -80,6 +81,7 @@ const Content: React.FC = () => {
                 setName('');
                 setDescription('');
                 setPreviewImage('');
+                setImage(undefined)
                 setIsTrue(false);
               }}
             >
